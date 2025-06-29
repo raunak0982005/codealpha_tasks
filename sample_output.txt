@@ -1,0 +1,67 @@
+Source IP: 192.168.234.82 ➡ Destination IP: 192.168.234.192
+Protocol: UDP | Source Port: 64257 ➡ Destination Port: 53
+============================================================
+Source IP: 192.168.234.192 ➡ Destination IP: 192.168.234.82
+Protocol: UDP | Source Port: 53 ➡ Destination Port: 64257
+============================================================
+Source IP: 20.189.173.8 ➡ Destination IP: 192.168.234.82
+Protocol: TCP | Source Port: 443 ➡ Destination Port: 54416
+============================================================
+Source IP: 192.168.234.82 ➡ Destination IP: 20.189.173.8
+Protocol: TCP | Source Port: 54416 ➡ Destination Port: 443
+============================================================
+Source IP: 192.168.234.82 ➡ Destination IP: 20.189.173.8
+Protocol: TCP | Source Port: 54417 ➡ Destination Port: 443
+============================================================
+Source IP: 192.168.234.82 ➡ Destination IP: 50.19.241.159
+Protocol: TCP | Source Port: 54418 ➡ Destination Port: 443
+============================================================
+Source IP: 192.168.234.82 ➡ Destination IP: 20.189.173.8
+Protocol: TCP | Source Port: 54416 ➡ Destination Port: 443
+Payload Data:
+hdptxﳢ&W/?0BYsC<#aad4
+l)^NFOf +/,0̨̩/5**
+
+
+jj-Dih2#3jjY%(f_L=wl})[!
+$f0#^'uT_NFG+I۔DVH;<1-q7_͋Tq/רO]$!JJVg9aXs$rVtt!        )cI!zc2␦P:wS@~%C1C$IGwklyU,A/
+
+}6r7D␦GDMH@rA
+oUn
+\9#yy8P{7
+TqhĐ.|yH>ITI,4:M669:'UVc!`-Xh[ɆlT_՗f
+Uj`׌[R,p|␦gasZm)o|66Ӗzㅝ18ȵsn:␦4`9/#E$vxO_q;3/6|(/NGli*vb       A3S48/Y
+.ȉvXCM76#b␦Cr)uIt+Vd.7q,qvww]_z
+t<'W?5D.JJqN~+&Bc5N16.4X+0Ӊ^Xc%$
+Dwb'R   QDU
+C.y="zg8A8i+n9R=TP9;fb
+!|E
+wlPMx wZ%hps<YRyy@.s
+LoeB}TjTǵ lp@cG܍`;3UkxWivOҡ{LYPj9c¹nr!́ׄ␦LYQ,p/ Z&KC    ¶jep ᭔&0%8NNiK|CX"0ˢta}rdjy*
+wt
+Q4{Vd=cUtlikz>,82kt夅@ѐĬpm24ٴ
+
+hJRWg0")2!
+PCSGZ
+============================================================
+Source IP: 192.168.234.82 ➡ Destination IP: 20.189.173.8
+Protocol: TCP | Source Port: 54416 ➡ Destination Port: 443
+Payload Data:
+2f+jjݗz˼*3apʨr«(G1ESgE؞~9lsc9Ot-+-u :}ѦqK
+%# mobile.events.data.microsoft.com
+roE[isv4˫*!>*[с˄t?t7MOrҫy?md$AB15
+hwEʘq2D\{VHB.p/Eu0}S#
+j;ȓ@7   ̶ҭI+DM~OёWS#וZJ|_n΢,B{
+Dj
+܇␦]I%ﻸr)[& ␦7{v~ҤfOWe~10ogBqhs<Y.y١0UC@nV[<g9E~h-8Ǭx
+============================================================
+Source IP: 20.207.73.82 ➡ Destination IP: 192.168.234.82
+Protocol: TCP | Source Port: 443 ➡ Destination Port: 54385
+Payload Data:
+"i]`'A;Po[^
+============================================================
+Source IP: 20.207.73.82 ➡ Destination IP: 192.168.234.82
+Protocol: TCP | Source Port: 443 ➡ Destination Port: 54385
+Payload Data:
+{j{)w3
+n3
