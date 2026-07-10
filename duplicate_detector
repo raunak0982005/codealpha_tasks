@@ -1,0 +1,90 @@
+import hashlib
+import json
+from datetime import datetime
+
+import boto3
+from botocore.exceptions import ClientError
+
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('unique_records')
+
+
+def lambda_handler(event, context):
+    try:
+        # Parse request body
+        body = json.loads(event['body'])
+
+        # Validate required fields
+        required_fields = ['name', 'email', 'phone']
+
+        for field in required_fields:
+            if field not in body or not str(body[field]).strip():
+                return {
+                    'statusCode': 400,
+                    'body': json.dumps({
+                        'message': f'Missing or empty field: {field}'
+                    })
+                }
+
+        # Normalize fields
+        name = body['name'].strip().lower()
+        email = body['email'].strip().lower()
+        phone = body['phone'].strip()
+
+        # Generate hash
+        normalized = f"{name}|{email}|{phone}"
+        record_hash = hashlib.sha256(normalized.encode()).hexdigest()
+
+        # Create record
+        item = {
+            'hash': record_hash,
+            'name': body['name'].strip(),
+            'email': email,
+            'phone': phone,
+            'created_at': datetime.utcnow().isoformat()
+        }
+
+        # Insert only if hash does not already exist
+        table.put_item(
+            Item=item,
+            ConditionExpression='attribute_not_exists(#h)',
+            ExpressionAttributeNames={
+                '#h': 'hash'
+            }
+        )
+
+        return {
+            'statusCode': 201,
+            'body': json.dumps({
+                'message': 'Record added successfully',
+                'duplicate': False,
+                'hash': record_hash
+            })
+        }
+
+    except dynamodb.meta.client.exceptions.ConditionalCheckFailedException:
+        return {
+            'statusCode': 409,
+            'body': json.dumps({
+                'message': 'Duplicate record detected',
+                'duplicate': True
+            })
+        }
+
+    except ClientError as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps({
+                'message': 'DynamoDB error',
+                'error': str(e)
+            })
+        }
+
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'body': json.dumps({
+                'message': 'Internal server error',
+                'error': str(e)
+            })
+        }
