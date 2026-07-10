@@ -1,5 +1,29 @@
+Task 3: Bus Pass Management System
+Overview
 
-Data Redundancy Removal System (AWS)
+A serverless Bus Pass Management System built using AWS services. The application provides APIs for passengers to search routes, book seats, validate tickets, and retrieve travel information through independent AWS Lambda functions.
+
+Features
+Search available bus routes
+Book seats
+Retrieve passenger tickets
+View bus schedules
+Validate booked tickets
+Lambda Functions
+File	Description
+searchRoutes.py	Search available bus routes
+bookSeat.py	Book a seat for a passenger
+getMyTickets.py	Retrieve booked tickets
+getSchedule.py	Get bus schedules
+validateTicket.py	Validate passenger tickets
+Technologies Used
+AWS Lambda
+Python
+Amazon DynamoDB
+API Gateway
+
+
+Task 1: Data Redundancy Removal System (AWS)
 
 Overview
 
